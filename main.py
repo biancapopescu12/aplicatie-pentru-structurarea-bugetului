@@ -20,7 +20,11 @@ st.markdown(
     .stApp {
         background: linear-gradient(135deg, #f4fff6 0%, #efffff 100%);
     }
-    h1, h2, h3 {
+    [data-testid="stHeading"] h1,
+    h1[data-testid="stHeading"] {
+        color: #00AE5E !important;
+    }
+    h2, h3 {
         color: #008b68;
     }
     div[data-testid="stMetric"] {
@@ -140,3 +144,5 @@ if costuri_grafic:
         height=420,
     )
     st.plotly_chart(grafic, use_container_width=True)
+
+    
